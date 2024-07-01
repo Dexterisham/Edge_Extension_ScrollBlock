@@ -1,5 +1,5 @@
 {
-    "name": "The Link FInder",
+    "name": "The Link Finder",
     "version": "0.0.0.1",
     "manifest_version": 3,
     "description": "An extension to Get the link of current tabs.",
@@ -9,11 +9,11 @@
         "48": "icons/nasapod48x48.png",
         "128": "icons/nasapod128x128.png"
     },
-
     "action": {
         "default_popup": "Src/popup.html"
     },
     "permissions": [
-        "activeTab"
-      ]
+        "activeTab",
+        "storage"
+    ]
 }
