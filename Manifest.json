@@ -14,6 +14,13 @@
     },
     "permissions": [
         "activeTab",
-        "storage"
+        "storage",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["Src/timer/content.js"]
+        }
     ]
 }
