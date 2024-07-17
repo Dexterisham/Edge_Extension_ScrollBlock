@@ -1,18 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Extension Popup</title>
+  <title>The Site Timer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      min-width: 300px;
+      padding: 15px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: #e0e0e0;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .banner {
+      background-color: rgba(0, 123, 255, 0.2);
+      color: white;
+      padding: 10px 0;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      border-color: #6c757d;
+    }
+  </style>
 </head>
 <body>
-  <h1>The Site Timer</h1>
-  <p>If this site distracts you click on save url to add a timer to ir</p> 
-  <p id="url-display"></p>
-
-  <button id="save-button">Save URL</button>
-  <button id="settings-button">Settings</button>
+  <div class="glass-card">
+    <div class="banner text-center">
+      <h1 class="h4 mb-0">The Site Timer</h1>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col">
+          <p class="mb-2">If this site distracts you, click on save URL to add a timer to it.</p>
+          <p id="url-display" class="mb-2 text-muted"></p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-6">
+          <button id="save-button" class="btn btn-primary w-100">Save URL</button>
+        </div>
+        <div class="col-6">
+          <button id="settings-button" class="btn btn-secondary w-100">Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="./popup.js"></script>
 </body>
